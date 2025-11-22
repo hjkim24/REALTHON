@@ -7,7 +7,7 @@ import {
   X,
 } from "lucide-react";
 import { AnalysisType } from "../types";
-import { postImage } from "../api/uploadImage";
+import { postImageFile } from "../api/uploadImage";
 
 interface UploadSectionProps {
   onAnalyze: (results: any, type: AnalysisType, major: string) => void;
@@ -25,20 +25,17 @@ const UploadSection: React.FC<UploadSectionProps> = ({
   const fileInputRef = useRef<HTMLInputElement>(null);
   const majorInputRef = useRef<HTMLInputElement>(null);
 
-  // 파일 선택 핸들러
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0]);
     }
   };
 
-  // 파일 제거
   const handleRemoveFile = () => {
     setFile(null);
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
-  // 파일 드래그앤드랍
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
@@ -46,7 +43,7 @@ const UploadSection: React.FC<UploadSectionProps> = ({
     }
   };
 
-  // 분석 (파일을 base64로 변환해서 서버로 전송)
+  // <-- 여기! 파일을 FormData로 직접 전송
   const handleAnalysisClick = async (type: AnalysisType) => {
     if (!file) return;
 
@@ -59,17 +56,8 @@ const UploadSection: React.FC<UploadSectionProps> = ({
     setInputError(false);
 
     try {
-      // 파일을 base64로 변환
-      const reader = new FileReader();
-      reader.onloadend = async () => {
-        const base64String = reader.result as string;
-        // base64 데이터 부분 추출 (data:image/png;base64,... 부분 제거)
-        const base64Data = base64String.split(",")[1];
-
-        const response = await postImage({ imageurl: base64Data });
-        onAnalyze(response, type, userMajor);
-      };
-      reader.readAsDataURL(file);
+      const response = await postImageFile(file);
+      onAnalyze(response, type, userMajor);
     } catch (error) {
       alert("분석에 실패했습니다. 다시 시도해주세요.");
       console.error(error);
