@@ -1,11 +1,11 @@
+import { Loader2, Sparkles } from "lucide-react";
 import React, { useState } from "react";
-import Sidebar from "./sidebar/Sidebar";
+import { postImageFile } from "./api/uploadImage";
 import UploadSection from "./components/UploadSection";
 import ResultsSection from "./results/ResultsSection";
-import { AnalysisType, CourseRecommendation, HistoryItem } from "./types";
-import { postImageFile } from "./api/uploadImage";
-import { Loader2, Sparkles } from "lucide-react";
+import Sidebar from "./sidebar/Sidebar";
 import appStyles from "./styles/app.styles";
+import { AnalysisType, CourseRecommendation, HistoryItem } from "./types";
 
 const App: React.FC = () => {
   const [analysisType, setAnalysisType] = useState<AnalysisType | null>(null);
@@ -94,13 +94,13 @@ const App: React.FC = () => {
       // FormData 업로드
       const response = await postImageFile(file);
       // 서버 응답의 subject 구조에 따라 결과 변환 (아래 예제는 서버 응답 그대로 사용)
-      const results: CourseRecommendation[] = response.subjects.map(
-        (subject) => ({
-          courseName: subject.title,
-          courseCode: subject.courseId || "", // courseId가 있으면 사용
-          credits: 3, // 필요에 따라 서버에 있으면 사용
-          rating: 4, // 필요에 따라 서버에 있으면 사용
-          reason: subject.reason,
+      const results: CourseRecommendation[] = response.recommendations.map(  // subjects → recommendations
+        (item) => ({  // subject → item
+          courseName: item.title,
+          courseCode: item.courseId || "",
+          credits: 3,
+          rating: 4,
+          reason: item.reason,
         })
       );
       setRecommendations(results);

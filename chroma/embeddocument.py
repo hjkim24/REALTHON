@@ -234,7 +234,11 @@ def process_document_folder(
             ids=course_ids,
             collection_name="courses",
             persist_directory=persist_directory,
-            clear_existing=True  # Clear collection to avoid duplicates
+            clear_existing=True,  # Clear collection to avoid duplicates
+            embedding_model=model,
+            use_server=True,  # 서버 모드 사용
+            server_host="localhost",
+            server_port=8000
         )
         print("✅ Successfully saved courses to 'courses' collection!")
     else:

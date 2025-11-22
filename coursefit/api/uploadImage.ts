@@ -1,6 +1,5 @@
 // api/uploadImage.ts
 
-import { apiClient } from "./client";
 
 // 서버로부터 받을 추천과목 타입 정의
 export interface SubjectItem {
@@ -11,7 +10,13 @@ export interface SubjectItem {
 }
 
 export interface PostImageResponse {
-  subjects: SubjectItem[];
+  recommendations: Array<{  // subjects → recommendations
+    courseId: string;
+    title: string;
+    reason: string;
+    similarity: number;
+    metadata?: Record<string, any>;
+  }>;
 }
 
 // 실제 이미지 파일을 업로드하는 함수

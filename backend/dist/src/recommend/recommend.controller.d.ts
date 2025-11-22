@@ -1,4 +1,3 @@
-import { Category, Grade } from '@prisma/client';
 import { MulterFile } from '../common/types/multer.types';
 import { CourseService } from './course.service';
 import { RecommendDto } from './dto/recommend.dto';
@@ -8,16 +7,21 @@ export declare class RecommendController {
     private courseService;
     constructor(service: RecommendService, courseService: CourseService);
     getRecommendation(dto: RecommendDto): Promise<{
-        refinedQuery: string;
-        recommendation: string | null;
+        recommendations: Array<{
+            courseId: string;
+            title: string;
+            reason: string;
+            similarity: number;
+            metadata?: Record<string, any>;
+        }>;
     }>;
     uploadTranscript(file: MulterFile | undefined): Promise<{
-        courses: Array<{
-            id: number;
+        recommendations: Array<{
+            courseId: string;
             title: string;
-            courseCode: string;
-            grade: Grade;
-            category: Category;
+            reason: string;
+            similarity: number;
+            metadata?: Record<string, any>;
         }>;
     }>;
 }
