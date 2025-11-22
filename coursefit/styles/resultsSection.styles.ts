@@ -48,6 +48,8 @@ const resultsSectionStyles = {
   newAnalysisButton:
     "group flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-xl shadow-blue-200 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 w-full md:w-auto justify-center",
   newAnalysisIcon: "group-hover:rotate-90 transition-transform duration-500",
+  similarityText: "ml-2 text-indigo-400 font-semibold text-sm",
+  similarityLabel: "mr-2 text-slate-500 font-bold text-xs",
 };
 
 export default resultsSectionStyles;

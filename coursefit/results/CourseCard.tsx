@@ -32,21 +32,22 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, animationDelay }) => (
         </div>
 
         <div className="flex items-center gap-2">
-          <span className={resultsSectionStyles.difficultyLabel}>
-            난이도 평가
-          </span>
-          <div className={resultsSectionStyles.starsContainer}>
+          <span className={resultsSectionStyles.similarityLabel}>유사도</span>
+          <div>
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
                 size={14}
                 className={
-                  i < Math.floor(course.rating)
+                  i < Math.round(course.similarity * 5)
                     ? resultsSectionStyles.starFilled
                     : resultsSectionStyles.starEmpty
                 }
               />
             ))}
+            <span className={resultsSectionStyles.similarityText}>
+              {Math.round(course.similarity * 100)}%
+            </span>
           </div>
         </div>
       </div>
