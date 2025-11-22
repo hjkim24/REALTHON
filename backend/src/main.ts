@@ -12,6 +12,11 @@ async function bootstrap() {
     prefix: '/uploads/',
   });
 
+  app.enableCors({
+    origin: true, // 모든 origin 허용 (개발 환경용)
+    credentials: true,
+  });
+
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap().catch((error) => {

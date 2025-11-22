@@ -30,7 +30,8 @@ let RecommendController = class RecommendController {
         if (!file) {
             throw new common_1.BadRequestException('파일이 제공되지 않았습니다.');
         }
-        return await this.courseService.uploadTranscript(file);
+        await this.courseService.uploadTranscript(file);
+        return await this.service.recommend({ target_type: '전공' });
     }
 };
 exports.RecommendController = RecommendController;

@@ -130,6 +130,35 @@ let CourseService = CourseService_1 = class CourseService {
             courses: createdCourses,
         };
     }
+    async getUserCourses() {
+        return await this.prisma.course.findMany({
+            orderBy: {
+                id: 'desc',
+            },
+        });
+    }
+    async getUserCoursesByCategory(category) {
+        return await this.prisma.course.findMany({
+            where: {
+                category,
+            },
+            orderBy: {
+                id: 'desc',
+            },
+        });
+    }
+    async getHighGradeCourses() {
+        return await this.prisma.course.findMany({
+            where: {
+                grade: {
+                    in: [client_1.Grade.A_PLUS, client_1.Grade.A],
+                },
+            },
+            orderBy: {
+                id: 'desc',
+            },
+        });
+    }
 };
 exports.CourseService = CourseService;
 exports.CourseService = CourseService = CourseService_1 = __decorate([

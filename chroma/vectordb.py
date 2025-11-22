@@ -4,8 +4,10 @@ Performs similarity search to find top-k relevant documents from vector database
 """
 
 from typing import List, Dict, Any, Optional
+import os
 import chromadb
 from chromadb.config import Settings
+import chromadb.utils.embedding_functions as embedding_functions
 
 
 def search_vectordb(
@@ -76,7 +78,11 @@ def add_documents_to_vectordb(
     ids: Optional[List[str]] = None,
     collection_name: str = "documents",
     persist_directory: Optional[str] = None,
-    clear_existing: bool = False
+    clear_existing: bool = False,
+    embedding_model: str = "text-embedding-ada-002",
+    use_server: bool = False,
+    server_host: str = "localhost",
+    server_port: int = 8000
 ) -> None:
     """
     Add documents to the vector database.
@@ -87,13 +93,22 @@ def add_documents_to_vectordb(
         metadatas: Optional list of metadata dictionaries for each document
         ids: Optional list of document IDs (auto-generated if not provided)
         collection_name: Name of the ChromaDB collection
-        persist_directory: Directory to persist the database
+        persist_directory: Directory to persist the database (used when use_server=False)
         clear_existing: If True, delete existing collection before adding (default: False)
+        embedding_model: Embedding model to use (default: "text-embedding-ada-002")
+        use_server: If True, use HTTP client to connect to ChromaDB server (default: False)
+        server_host: ChromaDB server host (default: "localhost")
+        server_port: ChromaDB server port (default: 8000)
     """
-    # Initialize ChromaDB client
-    if persist_directory:
+    # ChromaDB 클라이언트 초기화
+    if use_server:
+        # HTTP 서버 모드 (Docker 컨테이너 사용)
+        client = chromadb.HttpClient(host=server_host, port=server_port)
+    elif persist_directory:
+        # 로컬 파일 시스템 모드 (기존 방식)
         client = chromadb.PersistentClient(path=persist_directory)
     else:
+        # 인메모리 모드
         client = chromadb.Client(Settings(anonymized_telemetry=False))
     
     # Delete existing collection if clear_existing is True
@@ -105,8 +120,18 @@ def add_documents_to_vectordb(
             # Collection doesn't exist, which is fine
             pass
     
+    # OpenAI embedding function 설정
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY not found in environment variable")
+    
+    openai_ef = embedding_functions.OpenAIEmbeddingFunction(
+        api_key=api_key,
+        model_name=embedding_model
+    )
+    
     # Get or create collection
-    collection = client.get_or_create_collection(name=collection_name)
+    collection = client.get_or_create_collection(name=collection_name, embedding_function=openai_ef)
     
     # Generate IDs if not provided
     if ids is None:

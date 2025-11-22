@@ -1,5 +1,7 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
+console.log(BASE_URL)
+
 export async function apiClient<T>(
   endpoint: string,
   options: RequestInit = {}

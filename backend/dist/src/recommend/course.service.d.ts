@@ -20,4 +20,25 @@ export declare class CourseService {
             category: Category;
         }[];
     }>;
+    getUserCourses(): Promise<Array<{
+        id: number;
+        title: string;
+        courseCode: string;
+        grade: Grade;
+        category: Category;
+    }>>;
+    getUserCoursesByCategory(category: Category): Promise<Array<{
+        id: number;
+        title: string;
+        courseCode: string;
+        grade: Grade;
+        category: Category;
+    }>>;
+    getHighGradeCourses(): Promise<Array<{
+        id: number;
+        title: string;
+        courseCode: string;
+        grade: Grade;
+        category: Category;
+    }>>;
 }

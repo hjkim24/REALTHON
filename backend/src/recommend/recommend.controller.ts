@@ -7,7 +7,6 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { Category, Grade } from '@prisma/client';
 import { MulterFile } from '../common/types/multer.types';
 import { CourseService } from './course.service';
 import { RecommendDto } from './dto/recommend.dto';
@@ -22,13 +21,13 @@ export class RecommendController {
 
   @Post()
   async getRecommendation(@Body() dto: RecommendDto): Promise<{
-    recommendedCourses: Array<{
+    recommendations: Array<{
       courseId: string;
       title: string;
+      reason: string;
       similarity: number;
-      metadata: Record<string, any>;
+      metadata?: Record<string, any>;
     }>;
-    userCoursesCount: number;
   }> {
     return await this.service.recommend(dto);
   }
@@ -38,17 +37,18 @@ export class RecommendController {
   async uploadTranscript(
     @UploadedFile() file: MulterFile | undefined,
   ): Promise<{
-    courses: Array<{
-      id: number;
+    recommendations: Array<{
+      courseId: string;
       title: string;
-      courseCode: string;
-      grade: Grade;
-      category: Category;
+      reason: string;
+      similarity: number;
+      metadata?: Record<string, any>;
     }>;
   }> {
     if (!file) {
       throw new BadRequestException('파일이 제공되지 않았습니다.');
     }
-    return await this.courseService.uploadTranscript(file);
+    await this.courseService.uploadTranscript(file);
+    return await this.service.recommend({ target_type: '전공' });
   }
 }

@@ -1,16 +1,14 @@
-import React, { useState, useRef } from "react";
 import {
-  BookOpenCheck,
   AlertCircle,
+  BookOpenCheck,
   FileSpreadsheet,
   Upload,
   X,
 } from "lucide-react";
+import React, { useRef, useState } from "react";
 import { AnalysisType } from "../types";
-import { postImageFile } from "../api/uploadImage";
-
 interface UploadSectionProps {
-  onAnalyze: (results: any, type: AnalysisType, major: string) => void;
+  onAnalyze: (file: File, type: AnalysisType, major: string) => void; // response 대신 file
   isAnalyzing: boolean;
 }
 
@@ -44,25 +42,21 @@ const UploadSection: React.FC<UploadSectionProps> = ({
   };
 
   // <-- 여기! 파일을 FormData로 직접 전송
-  const handleAnalysisClick = async (type: AnalysisType) => {
-    if (!file) return;
+  // components/UploadSection.tsx의 handleAnalysisClick 수정
+const handleAnalysisClick = async (type: AnalysisType) => {
+  if (!file) return;
 
-    // Major 분석시 전공명 필수
-    if (type === AnalysisType.MAJOR && !userMajor.trim()) {
-      setInputError(true);
-      majorInputRef.current?.focus();
-      return;
-    }
-    setInputError(false);
+  // Major 분석시 전공명 필수
+  if (type === AnalysisType.MAJOR && !userMajor.trim()) {
+    setInputError(true);
+    majorInputRef.current?.focus();
+    return;
+  }
+  setInputError(false);
 
-    try {
-      const response = await postImageFile(file);
-      onAnalyze(response, type, userMajor);
-    } catch (error) {
-      alert("분석에 실패했습니다. 다시 시도해주세요.");
-      console.error(error);
-    }
-  };
+  // postImageFile 호출 제거 - App.tsx에서 처리
+  onAnalyze(file, type, userMajor); // 파일과 타입, 전공명만 전달
+};
 
   return (
     <div className="w-full max-w-2xl mx-auto flex flex-col gap-6 animate-slide-up">

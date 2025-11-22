@@ -1,8 +1,13 @@
-import type { Document } from '@langchain/core/documents';
-export declare class VectorService {
-    private vectordb;
-    private embedding;
+import { Document } from '@langchain/core/documents';
+import { OnModuleInit } from '@nestjs/common';
+export declare class VectorService implements OnModuleInit {
+    private readonly logger;
+    private readonly embeddings;
+    private vectorStore;
+    private readonly collectionName;
+    private readonly chromaServerUrl;
     constructor();
-    initialSearch(course: string): Promise<Array<Document<Record<string, any>>>>;
-    finalSearch(query: string, targetType: string): Promise<Array<Document<Record<string, any>>>>;
+    onModuleInit(): Promise<void>;
+    initialSearch(course: string): Promise<Document[]>;
+    finalSearch(query: string, _targetType: string): Promise<Document[]>;
 }
