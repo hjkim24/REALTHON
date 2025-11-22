@@ -30,11 +30,11 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, animationDelay }) => (
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 pl-2">
           <span className={resultsSectionStyles.similarityLabel}>유사도</span>
-            <span className={resultsSectionStyles.similarityText}>
-              {Math.round(course.similarity * 100)}%
-            </span>
+          <span className={resultsSectionStyles.similarityText}>
+            {Math.round(course.similarity * 100)}%
+          </span>
         </div>
       </div>
 
