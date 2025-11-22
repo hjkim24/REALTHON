@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 인공지능(영강)
+교수명: 윤수식
+과목코드-분반: COSE361-00
+학점: 3학점
+
+[강의요목]
+본 과목은 인공 지능의 입문 과정으로, 탐색을 통한 문제 해결, 지식 표현, 논리와 추론, 계획 수립, 불확실성 및 확률적 추론, 의사 결정, 기계 학습, 그리고 인공 지능 응용 분야 등을 다룬다.
+
+[주차별 강의 내용]
+1주: Introduction
+2주: Search
+3주: Search
+4주: Game
+5주: Bayes Nets (HW1)
+6주: Bayes Nets
+7주: Mid-term Exam (중간고사)
+8주: Mid-term Review, Tutorial 1 (HW2)
+9주: HMMs
+10주: MDPs
+11주: Machine Learning (HW3)
+12주: Deep Learning Basics and Frontiers
+13주: Final Exam (기말고사)
+14주: Final Review, Tutorial 2 (HW4)
+15주: Make-up Class, Tutorial 3 (tentative)
+16주: Make-up Class, Tutorial 3 (tentative)
+
+[평가 방식]
+중간고사: 40%
+기말고사: 40%
+과제: 20%
+출석: 0%
+
+[교재 정보]
+Artificial Intelligence: A Modern Approach 4th - Stuart Russell and Peter Norvig (Pearson)

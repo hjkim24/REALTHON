@@ -1,0 +1,36 @@
+[과목 정보]
+과목명: 운영체제(영강)
+교수명: 오상은
+과목코드-분반: COSE341-02
+학점: 3학점
+
+[강의요목]
+이 과목의 목적은 운영체제의 정의, 발전과정, 그리고 구조를 소개하고, 작업을 처리하기 위해 운영체제가 갖추어야 할 기본 기능에 대해 배우는 것이다. [cite_start]기본 기능들은 프로세스 관리, 동기화, 기억장치 관리, 가상메모리, 파일시스템, 그리고 대용량 기억장치의 관리 방법 등이다[cite: 80].
+
+[주차별 강의 내용]
+1주: Course Introduction
+2주: OS structures
+3주: Computer system for OS
+4주: OS structure and virtualization
+5주: Process
+6주: Process scheduling
+7주: Thread
+8주: Midterm exam (중간고사)
+9주: IPC
+10주: Virtual memory 1
+11주: Virtual memory 2
+12주: Synchronization
+13주: Synchronization examples and primitives
+14주: IO system basic
+15주: Network and file system
+16주: Final exam (기말고사)
+
+[평가 방식]
+중간고사: 30%
+기말고사: 30%
+과제: 35%
+출석: 5%
+
+[교재 정보]
+Operating Systems: Three Easy Pieces - Arpaci-Dusseau
+참고: Operating System Concepts - Silberschatz

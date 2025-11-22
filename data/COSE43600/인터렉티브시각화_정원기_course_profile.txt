@@ -1,0 +1,3 @@
+Course Name: 인터렉티브시각화
+Professor: 정원기
+Course ID: COSE43600

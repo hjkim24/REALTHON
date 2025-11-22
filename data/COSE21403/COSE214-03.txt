@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 알고리즘(영강)
+교수명: 안가빈
+과목코드-분반: COSE214-03
+학점: 3학점
+
+[강의요목]
+[cite_start]알고리즘의 표현방법, 기능 및 처리과정, 난해도의 분석, 효율적인 알고리즘을 설계하는 기법, 응용 등을 다루고 기존에 개발된 알고리즘들을 주제별로 분류하여 활용한다[cite: 4].
+
+[주차별 강의 내용]
+1주: Introduction and Course Overview & Divide and Conquer
+2주: Sorting Algorithms and Asymptotic Notation
+3주: Solving Recurrences (Master Method and Substitution Method)
+4주: Randomized Algorithm and QuickSort
+5주: Sorting Lower Bounds, Counting Sort, Radix Sort
+6주: Heaps, Binary Search Trees
+7주: Balanced BSTs: Red-Black Trees
+8주: Midterm Exam (중간고사)
+9주: Trees and Graphs (DFS and BFS) and Strongly Connected Components
+10주: Shortest Path Problem: Dijkstra and Bellman-Ford Algorithms
+11주: Dynamic Programming: Bellman-Ford, Floyd-Warshall
+12주: More Dynamic Programming
+13주: Greedy Algorithms
+14주: Minimum Spanning Trees
+15주: Max Flow, Min Cut and Ford-Fulkerson
+16주: Final Exam (기말고사)
+
+[평가 방식]
+중간고사: 40%
+기말고사: 40%
+퀴즈 및 과제: 15%
+출석: 5%
+
+[교재 정보]
+Algorithms Illuminated - Tim Roughgarden

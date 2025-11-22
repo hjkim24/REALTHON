@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 딥러닝(영강)
+교수명: 이상민
+과목코드-분반: COSE474-03
+학점: 3학점
+
+[강의요목]
+본 과목은 심층 신경망의 이론 및 응용 분야를 고찰한다. CNN, RNN/LSTM, Transformer, Generative models 등의 딥러닝 기법과 학습에 필요한 제반 기법(optimization, regularization 등)을 소개한다.
+
+[주차별 강의 내용]
+1주: Course Introduction
+2주: Machine Learning Basics
+3주: Neural Networks
+4주: Training Neural Networks
+5주: Convolutional Neural Networks (1)
+6주: Convolutional Neural Networks (2)
+7주: Recurrent Neural Networks (1)
+8주: Midterm Exam (중간고사)
+9주: Recurrent Neural Networks (2)
+10주: Transformers
+11주: Applications: NLP
+12주: Applications: CV
+13주: Self-Supervised Learning
+14주: Generative Models (1)
+15주: Generative Models (2)
+16주: Final Exam (기말고사)
+
+[평가 방식]
+중간고사: 25%
+기말고사: 35%
+과제: 30%
+출석: 10%
+
+[교재 정보]
+Deep Learning - Ian Goodfellow et al. (MIT Press)

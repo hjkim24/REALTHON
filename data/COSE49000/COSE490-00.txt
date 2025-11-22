@@ -1,0 +1,36 @@
+[과목 정보]
+과목명: 전산학특강(영강)
+교수명: 박성빈
+과목코드-분반: COSE490-00
+학점: 3학점
+
+[강의요목]
+전산학 관련한 최신 기술 분야를 소개 하며, 금학기 주제는 P vs NP 문제의 구조적 속성을 이해하는 것이다.
+
+[주차별 강의 내용]
+1주: introduction
+2주: P, NP, coNP
+3주: nondeterministic polynomial time algorithm, polynomial time verification algorithm
+4주: Turing reduction, oracle, NPC, polynomial time reduction, relativized computation
+5주: Dealing with hardness heuristics, quantum computing, hidden subgroup problem
+6주: nonuniform model of computation 1
+7주: nonuniform model of computation 2
+8주: midterm exam (중간고사)
+9주: Algorithmica and Heuristica, one way function, samplable distribution
+10주: distributional problem and average complexity
+11주: decidability and unprovability
+12주: DNA computing
+13주: AV mathematics
+14주: incompleteness and computability
+15주: structures in which P=NP (or, P is not the same as NP)
+16주: final exam (기말고사)
+
+[평가 방식]
+중간고사: 40%
+기말고사: 50%
+출석: 5%
+과제: 5%
+
+[교재 정보]
+Technical papers (downloadable)
+참고: 알고리즘의 능력과 한계 - 박성빈 (커뮤니케이션북스)

@@ -1,0 +1,3 @@
+Course Name: 공학수학
+Professor: 박중석 교수님
+Course ID: COSE28100

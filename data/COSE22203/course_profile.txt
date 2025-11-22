@@ -1,0 +1,3 @@
+Course Name: 컴퓨터구조(영강)
+Professor: 구건재 교수님
+Course ID: COSE22203

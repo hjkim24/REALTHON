@@ -1,0 +1,3 @@
+Course Name: 기계학습
+Professor: 김현철
+Course ID: COSE36201

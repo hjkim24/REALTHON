@@ -1,0 +1,21 @@
+[과목 정보]
+과목명: 개별연구프로젝트(영강)
+교수명: 김진규
+과목코드-분반: COSE407-00
+학점: 3학점
+
+[강의요목]
+대학원 랩과 공동으로 연구를 진행하는 프로젝트형 과목이다. 산업체 제안 주제별 산학 R&D 프로젝트를 진행하거나 대학원 랩실과 공동 프로젝트에 참여하여 실전적 SW 역량과 연구 역량을 향상한다.
+
+[주차별 강의 내용]
+1주: Orientation
+2-7주: Independent study
+8주: Independent study (Midterm Exam)
+9-15주: Independent study
+16주: Independent study (Final Exam)
+
+[평가 방식]
+P/F (Pass/Fail) 평가
+
+[교재 정보]
+정보 없음

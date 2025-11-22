@@ -1,0 +1,3 @@
+Course Name: 컴퓨터구조
+Professor: 서태원
+Course ID: COSE22204

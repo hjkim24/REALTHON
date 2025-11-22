@@ -1,25 +1,29 @@
 // backend/src/recommend/recommend.service.ts
 
-import { Document } from '@langchain/core/documents';
 import { Injectable } from '@nestjs/common';
 import { Category } from '@prisma/client';
-import { EntityNotExistException } from 'libs/exception/src';
 import { CourseService } from './course.service';
 import { RecommendDto } from './dto/recommend.dto';
-import { LLMService } from './llm/llm.service';
-import { PromptService } from './rag/prompt.service';
 import { VectorService } from './rag/vector.service';
+
+interface RecommendedCourse {
+  courseId: string;
+  title: string;
+  similarity: number;
+  metadata: Record<string, any>;
+}
 
 @Injectable()
 export class RecommendService {
   constructor(
     private vector: VectorService,
-    private prompt: PromptService,
-    private llm: LLMService,
-    private courseService: CourseService, // 추가
+    private courseService: CourseService,
   ) {}
 
-  async recommend(info: RecommendDto) {
+  async recommend(info: RecommendDto): Promise<{
+    recommendedCourses: RecommendedCourse[];
+    userCoursesCount: number;
+  }> {
     // 1) DB에서 사용자 수강 이력 가져오기
     const userCourses = await this.courseService.getUserCourses();
 
@@ -34,48 +38,73 @@ export class RecommendService {
         (course.grade === 'A_PLUS' || course.grade === 'A'),
     );
 
-    // 4) 초기 검색: 사용자가 좋은 성적을 받은 과목들 기반으로 검색
-    let firstDocs: Array<Document<Record<string, any>>>;
+    // 4) 이미 수강한 과목의 courseCode 목록 (제외용)
+    const excludeCourseIds = userCourses.map((course) => course.courseCode);
+
+    // 5) 각 좋은 성적 과목에 대해 유사한 과목 찾기
+    const allRecommendations: RecommendedCourse[] = [];
+
     if (highGradeCourses.length > 0) {
-      // 좋은 성적을 받은 과목들의 제목을 조합하여 검색
-      const courseNames = highGradeCourses.map((c) => c.title).join(', ');
-      firstDocs = await this.vector.initialSearch(courseNames);
+      // 각 과목별로 유사도 검색
+      const similarityResults = await Promise.all(
+        highGradeCourses.map(async (course) => {
+          const results = await this.vector.findSimilarCourses(
+            course.courseCode,
+            {
+              limit: 10,
+              excludeCourseIds,
+              category: info.target_type,
+            },
+          );
+
+          return results.map((result) => {
+            const courseId =
+              typeof result.document.metadata.course_id === 'string'
+                ? result.document.metadata.course_id
+                : String(result.document.metadata.course_id);
+            const title =
+              (typeof result.document.metadata.title === 'string'
+                ? result.document.metadata.title
+                : null) || courseId;
+
+            return {
+              courseId,
+              title,
+              similarity: result.similarity,
+              metadata: result.document.metadata,
+            };
+          });
+        }),
+      );
+
+      // 모든 결과를 하나의 배열로 병합
+      allRecommendations.push(...similarityResults.flat());
     } else {
-      // 없으면 기존 방식대로
-      firstDocs = await this.vector.initialSearch(info.course);
+      // 좋은 성적을 받은 과목이 없으면 빈 배열 반환
+      return {
+        recommendedCourses: [],
+        userCoursesCount: userCourses.length,
+      };
     }
 
-    // 5) 쿼리 재작성 - 사용자 수강 이력 정보 포함
-    const refinePrompt = this.prompt.buildRefineQueryPrompt(
-      firstDocs,
-      info.grade,
-      userCourses, // 추가: 사용자 수강 이력
-      targetCategory, // 추가: 목표 카테고리
-    );
-    const refinedQuery = await this.llm.ask(refinePrompt);
+    // 6) 중복 제거 및 유사도 기준 정렬
+    const uniqueRecommendations = new Map<string, RecommendedCourse>();
 
-    if (!refinedQuery) {
-      throw new EntityNotExistException('refinedQuery');
+    for (const rec of allRecommendations) {
+      const existing = uniqueRecommendations.get(rec.courseId);
+      if (!existing || rec.similarity > existing.similarity) {
+        uniqueRecommendations.set(rec.courseId, rec);
+      }
     }
 
-    // 6) 최종 검색
-    const finalDocs = await this.vector.finalSearch(
-      refinedQuery,
-      info.target_type,
-    );
-
-    // 7) 최종 추천 생성 - 사용자 수강 이력 포함
-    const finalPrompt = this.prompt.buildFinalPrompt(
-      finalDocs,
-      info,
-      userCourses, // 추가: 사용자 수강 이력
-    );
-    const result = await this.llm.ask(finalPrompt);
+    // 7) 유사도 기준으로 정렬 (높은 순)
+    const sortedRecommendations = Array.from(uniqueRecommendations.values())
+      .sort((a, b) => b.similarity - a.similarity)
+      .slice(0, 20); // 상위 20개만 반환
 
     return {
-      refinedQuery,
-      recommendation: result,
-      userCoursesCount: userCourses.length, // 추가: 통계 정보
+      recommendedCourses: sortedRecommendations,
+      userCoursesCount: userCourses.length,
     };
   }
 }

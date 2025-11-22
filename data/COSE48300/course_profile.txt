@@ -1,0 +1,3 @@
+Course Name: 무선회로설계
+Professor: 이주섭 교수님
+Course ID: COSE48300

@@ -1,0 +1,3 @@
+Course Name: 확률 및랜덤과정
+Professor: 백승준
+Course ID: COSE38202

@@ -1,0 +1,32 @@
+[과목 정보]
+과목명: 확률 및랜덤과정
+교수명: 정원주
+과목코드-분반: COSE382-01
+학점: 3학점
+
+[강의요목]
+확률의 기본 개념, 확률변수 및 확률 분포의 개념을 배우고, 이를 다양한 공학적인 문제에 적용한다. 그리고 이 개념을 다중 확률변수 및 분포로 확장하고, 나아가 확률과정의 개념 및 응용을 배운다.
+
+[주차별 강의 내용]
+1주: Probability (Measure)
+2주: Conditional Probability (Bayes Rule)
+3주: Random Variables (PMF, PDF)
+4주: Random Variables (PDF)
+5주: Function of random Variables
+6주: Expectation and Variance
+7주: Moments
+8주: Midterm Exam (중간고사)
+9주: Transform
+10주: Transform
+11주: Gaussian Random Vectors
+12주: Inequalities
+13주: Random Process
+14주: Markov Process
+15주: Markov Process
+16주: Final Exam (기말고사)
+
+[평가 방식]
+정보 없음 (강의계획서 텍스트 추출 시 배점 비율 누락됨)
+
+[교재 정보]
+Introduction to Probability - Joseph K. Blitzstein and Jessica Hwang (CRC Press)

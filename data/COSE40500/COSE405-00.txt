@@ -1,0 +1,33 @@
+[과목 정보]
+과목명: 컴퓨터학콜로키움(영강)
+교수명: 김진규
+과목코드-분반: COSE405-00
+학점: 3학점
+
+[강의요목]
+본 과목은 학생들에게 다양한 컴퓨터학 분야의 최신, 첨단 연구 기술들에 대한 세미나를 제공하여, 컴퓨터학과 학생들의 지식 배양 및 시대적 동향에 대한 이해를 높이고자 한다.
+
+[주차별 강의 내용]
+1주: Course Overview and Introduction
+2주: Guest Lecture (Speaker: TBD)
+3주: Guest Lecture (Speaker: TBD)
+4-5주: Guest Lecture (Speaker: TBD)
+6주: Guest Lecture (Speaker: TBD)
+7주: Guest Lecture (Speaker: TBD)
+8주: Midterm Exam Period (중간고사)
+9주: Guest Lecture (Speaker: TBD)
+10주: Guest Lecture (Speaker: TBD)
+11주: Guest Lecture (Speaker: TBD)
+12주: Guest Lecture (Speaker: TBD)
+13주: Guest Lecture (Speaker: TBD)
+14주: Guest Lecture (Speaker: TBD)
+15주: Guest Lecture (Speaker: TBD)
+16주: Final Exam Period (기말고사)
+
+[평가 방식]
+출석: 70%
+과제: 30%
+중간/기말고사: 0%
+
+[교재 정보]
+정보 없음 (참고문헌 NA)

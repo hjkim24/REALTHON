@@ -1,0 +1,3 @@
+Course Name: 인공지능
+Professor: 윤수식
+Course ID: COSE36100

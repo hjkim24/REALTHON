@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 이산수학(영강)
+교수명: 박성빈
+과목코드-분반: COSE211-01
+학점: 3학점
+
+[강의요목]
+[cite_start]전산학의 기초를 이루는 이산수학에서의 중요 토픽들을 강의와 숙제/시험을 통하여 익히고 프로그램 개발 및 컴퓨터 응용을 보다 수학에 기반한 모델링을 통하여 수행 할 수 있는 능력을 배양. 주 내용은 Logic, 집합과 함수, 알고리즘 기초, 기초 정수론, 재귀함수, 그래프, 트리, Boolean Algebra등을 포함[cite: 544].
+
+[주차별 강의 내용]
+1주: introduction
+2주: propositional logic language
+3주: predicate logic - language
+4주: structure
+5주: infinite structures and finite structures 1
+6주: relation 1
+7주: function
+8주: midterm exam (중간고사)
+9주: relation 2
+10주: graph 1
+11주: graph 2
+12주: finite automa, pumping lemma
+13주: NP
+14주: SOE, Fagin's theorem
+15주: infinite structures and finite structures 2
+16주: final exam (기말고사)
+
+[평가 방식]
+중간고사: 40%
+기말고사: 50%
+출석: 5%
+과제: 5%
+
+[교재 정보]
+정보 없음

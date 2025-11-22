@@ -1,0 +1,3 @@
+Course Name: 컴퓨터네트워크
+Professor: 이원준 교수님
+Course ID: COSE34201

@@ -1,0 +1,36 @@
+[과목 정보]
+과목명: 컴퓨터구조(영강)
+교수명: 서태원
+과목코드-분반: COSE222-04
+학점: 3학점
+
+[강의요목]
+컴퓨터 동작의 핵심부분인 중앙처리장치 및 메모리 계층구조의 구성과 설계방법에 대해 학습한다. 중앙처리장치에서는 파이프라인 구조에 기반 CPU의 기계어 수행 원리 및 설계에 대해 학습한다. [cite_start]메모리 계층구조에서는 캐시메모리, 주기억장치, 하드디스크와 같은 저장장치에 대해 학습한다[cite: 479].
+
+[주차별 강의 내용]
+1주: Introduction
+2주: Computer Abstractions and Technology, Performance
+3주: RISC-V Instructions: Data processing
+4주: RISC-V Instructions: Data processing
+5주: RISC-V Instructions: Memory Access
+6주: RISC-V Instructions: Branch
+7-8주: RISC-V single-cycle CPU design / Midterm
+9주: RISC-V single-cycle CPU design
+10주: RISC-V pipelined CPU design
+11주: RISC-V pipelined CPU design
+12주: Caches
+13주: Caches
+14주: Virtual Memory & TLB
+15주: Storage & IO
+16주: Final (기말고사)
+
+[평가 방식]
+중간고사: 30%
+기말고사: 35%
+프로젝트: 30%
+과제: 5%
+출석: 0%
+
+[교재 정보]
+원리부터 설계까지 컴퓨터구조: RISC-V 중심으로 - 서태원 (홍릉)
+Digital Design and Computer Architecture: RISC-V Edition - Harris & Harris

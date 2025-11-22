@@ -1,0 +1,31 @@
+과목명: 인공지능
+교수명: 육동석
+과목코드: COSE361 (02)
+
+강의요목:
+본 과목은 탐색 기반 문제 해결, 지식 표현, 논리와 추론, 계획, 불확실성과 확률적 추론, 기계학습, 인공지능 응용 등 다양한 인공지능 기본 개념을 다루는 입문 강의입니다.
+
+학습목표:
+인공지능 이론 및 실제 응용에 대한 이해
+
+교재 정보:
+Artificial Intelligence - A Modern Approach (4판),
+Stuart Russell & Peter Norvig, 2020,
+ISBN: 9780134610993
+
+주차별 내용:
+1주차: 소개(Introduction)
+2주차: 상태 공간 탐색(State Space Search)
+3주차: 게임 플레이(Game Playing)
+4주차: 제약 충족 문제(Constraint Satisfaction Problems)
+5주차: 추론(Inference)
+6주차: 일阶 논리(First-Order Logic)
+7주차: 계획(Planning)
+8주차: 중간고사 (4/23)
+9주차: 베이지안 네트워크(Bayesian Networks)
+10주차: 시간에 따른 확률적 추론(Probabilistic Reasoning over Time)
+11주차: 머신러닝(Machine Learning)
+12주차: 딥러닝(Deep Learning)
+13주차: 딥 생성 모델(Deep Generative Models)
+14주차: 자연어 처리(Natural Language Processing)
+15주차: 기말고사 (6/16)

@@ -1,0 +1,3 @@
+Course Name: 데이터베이스
+Professor: 박종혁
+Course ID: COSE37100

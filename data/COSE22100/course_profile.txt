@@ -1,0 +1,3 @@
+Course Name: 논리설계
+Professor: 이숙윤
+Course ID: COSE22100

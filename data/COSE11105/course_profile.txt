@@ -1,0 +1,3 @@
+Course Name: 전산수학I
+Professor: 백승준 교수님
+Course ID: COSE11105

@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 프로그래밍언어(영강)
+교수명: 박지혁
+과목코드-분반: COSE212-01
+학점: 3학점
+
+[강의요목]
+프로그래밍 언어의 원리와 프로그래밍 언어를 구성하는 제반 요소들을 이해하고 각 언어별 특징에 대하여 학습하며 프로그래밍 언어의 이해를 위해 Syntax와 Semantics 등에 대하여 학습한다. [cite_start]Semantics를 공부하기 위하여 Higher-order procedure를 지원해 주는 언어의 interpreter를 이용한다[cite: 803].
+
+[주차별 강의 내용]
+1주: Introduction
+2주: Syntax and Semantics
+3주: Identifiers
+4주: Functions (First-Order / First-Class)
+5주: Syntactic Sugars / Recursive Functions
+6주: Mutable Data Structures / Variables
+7주: Garbage Collection / Lazy Evaluation
+8주: Midterm (중간고사)
+9주: Continuations
+10주: First-Class Continuations
+11주: Type Systems
+12주: Typing Recursive Functions
+13주: Algebraic Data Types
+14주: Polymorphism (Parametric / Subtype)
+15주: Type Inference
+16주: Final exam
+
+[평가 방식]
+중간고사: 30%
+기말고사: 30%
+출석: 10%
+과제: 30%
+
+[교재 정보]
+Types and Programming Languages - Benjamin C. Pierce (The MIT Press)

@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 계산이론(영강)
+교수명: 우승훈
+과목코드-분반: COSE215-00
+학점: 3학점
+
+[강의요목]
+[cite_start]컴퓨터 과학의 이론적 모델인 Finite Automata, Push Down Automata, Turing Machines 등에 대하여 고찰하고, 이를 기반으로 하여 computability와 computational complexity 이론에 관하여 배운다[cite: 651].
+
+[주차별 강의 내용]
+1주: Introduction
+2주: Finite Automata
+3주: Regular Languages and Regular Grammars
+4주: Properties of Regular Languages
+5주: Context-Free Languages
+6주: Simplification of Context-Free Grammars and Normal Forms
+7주: Pushdown Automata
+8주: Midterm (중간고사)
+9주: Properties of Context-Free Languages
+10주: Turing Machines
+11주: Other Models of Turing Machines
+12주: A Hierarchy of Formal Languages and Automata
+13주: Limits of Algorithmic Computation
+14주: Other Models of Computation
+15주: Class Review
+16주: Final exam (기말고사)
+
+[평가 방식]
+중간고사: 35%
+기말고사: 35%
+과제: 20%
+출석: 10%
+
+[교재 정보]
+An Introduction to Formal Languages and Automata, 7th Edition - Peter Linz

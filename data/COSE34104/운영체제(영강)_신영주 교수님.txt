@@ -1,0 +1,7 @@
+- COSE341(04)
+교수님:신영주 교수님
+평점:4.0
+강의평:
+1/10 운영체제의 전반적인 원리에 대해서 배울 수 있는 강의였습니다 매시간 출석을 하시고 수업을 하십니다 학기당 3번 텀프로젝트가 나오는데, 이 텀프로젝트를 하는 경우 수업시간 일부를 과제 설명과 질의응답하는 시간으로 편성해주십니다 텀프로젝트는 기간이 꽤 널널하게 나오며 충분히 할 수 있는 정도입니다 중간, 기말고사를 모두 보며 개념에 관한 내용과, 스케쥴링 방식등을 주고 일부 계산하라는 문제도 나옵니다 수업에 배운 내용을 충실히 익히면 잘 풀수 있으나, 타임어택 느낌이 있어서 시간 분배를 잘 하는 것이 좋습니다 학점을 '보통'(이)라 평가한 강의평입니다.
+2/10 I have learned a lot from the textbook. The textbook is really good and practically all the exam questions come from the textbook. There will be midterm and final exams and every questions are open, you need to give detailed descriptions about some concepts and their relations. There will also be three homeworks regarding Pintos. Really satisfying when all the test result turns "passed" 이 강의를 추천!학점을 '보통'(이)라 평가한 강의평입니다.
+3/10 출석은 매번 조교님께서 정확히 수업 시작할때 부르시기 때문에, 늦으면 안됩니다.  시험은 중간 기말 2번 모두 봤는데, 중간은 개념 + 코드 해석 위주, 기말은 개념 + 공식 계산 위주의 문제로 출제되었습니다.  시험은 어렵게 나오는 편입니다. 평균이 30점 정도 되었던 걸로 기억합니다.  과제의 양은 적은 편입니다. 총 3번의 과제가 있는데, 함수 분석 / alarm clock 기능 구현 / 우선 순위 큐 구현 이렇게 3개만 하면 됩니다.  학점은 역시 신영주 교수님답게 빡셉니다... 학점을 '기대 이하'(이)라 평가한 강의평입니다.

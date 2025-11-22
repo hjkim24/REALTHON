@@ -1,0 +1,3 @@
+Course Name: 공학수학
+Professor: 이종실
+Course ID: 공학수학_이종실

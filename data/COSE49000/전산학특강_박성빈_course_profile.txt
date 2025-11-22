@@ -1,0 +1,3 @@
+Course Name: 전산학특강
+Professor: 박성빈
+Course ID: COSE49000

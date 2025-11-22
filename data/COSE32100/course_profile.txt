@@ -1,0 +1,3 @@
+Course Name: 컴퓨터시스템설계(영강)
+Professor: 서태원 교수님
+Course ID: COSE32100

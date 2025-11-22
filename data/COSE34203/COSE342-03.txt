@@ -1,0 +1,35 @@
+[과목 정보]
+과목명: 컴퓨터네트워크
+교수명: 민성기
+과목코드-분반: COSE342-03
+학점: 3학점
+
+[강의요목]
+컴퓨터 네트워크의 가장 기본적인 프로토콜인 TCP/IP 스택에 대한 기초적인 이해와 구체적인 동작 원리를 학습한다.
+
+[주차별 강의 내용]
+1주: Introduction / Network Overview
+2주: Internet Address
+3주: Network Layer Protocol (ARP)
+4주: Network Layer Protocol (IPv4, IPv6)
+5주: Network Layer Protocol (ICMPv4)
+6주: Dynamic Host Configuration Protocol (DHCP)
+7주: Domain Name System (DNS)
+8주: 중간고사 (Mid-term)
+9주: IP Routing Protocol (RIP)
+10주: IP Routing Protocol (OSPF)
+11주: IP Routing Protocol (OSPF)
+12주: Transport Layer Protocols (UDP/TCP)
+13주: Transport Layer Protocol (TCP)
+14주: TCP Congestion Control
+15주: Network Address Translation (NAT)
+16주: 기말고사 (Final)
+
+[평가 방식]
+중간고사: 30%
+기말고사: 30%
+과제: 30%
+출석: 10%
+
+[교재 정보]
+TCP/IP Illustrated - Stevens (Addison-Wesley)

@@ -1,0 +1,3 @@
+Course Name: 논리설계(영강)
+Professor: PHAM NGOC SON 교수님
+Course ID: COSE22102

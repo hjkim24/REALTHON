@@ -21,7 +21,15 @@ export class RecommendController {
   ) {}
 
   @Post()
-  async getRecommendation(@Body() dto: RecommendDto) {
+  async getRecommendation(@Body() dto: RecommendDto): Promise<{
+    recommendedCourses: Array<{
+      courseId: string;
+      title: string;
+      similarity: number;
+      metadata: Record<string, any>;
+    }>;
+    userCoursesCount: number;
+  }> {
     return await this.service.recommend(dto);
   }
 

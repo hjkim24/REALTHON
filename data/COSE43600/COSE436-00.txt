@@ -1,0 +1,34 @@
+[과목 정보]
+과목명: 인터렉티브시각화(영강)
+교수명: 정원기
+과목코드-분반: COSE436-00
+학점: 3학점
+
+[강의요목]
+사이버 공간상의 방대한 데이터나 콘텐츠를 컴퓨터 프로그래밍을 이용하여 가시화 시키는 방법을 학습한다. 스마트 미디어에서의 콘텐츠 가시화 방법과 GPU를 이용한 가속화 프로그래밍 수업을 진행한다.
+
+[주차별 강의 내용]
+1-2주: Introduction, Graphics Systems / OpenGL Basics
+3주: Transformations
+4주: Data Acquisition, Representation
+5주: Viewing
+6주: Lighting, Shading
+7주: Shaders
+8주: 중간고사
+9주: Color Models
+10주: Textures
+11주: Volume rendering
+12주: Surface visualization
+13주: Geometric processing
+14주: Image visualization
+15-16주: Advanced topics in visualization / 기말고사
+
+[평가 방식]
+중간고사: 22%
+기말고사: 23%
+과제: 45%
+출석: 10%
+
+[교재 정보]
+OpenGL Programming Guide (9th edition)
+Interactive Computer Graphics (7th edition)

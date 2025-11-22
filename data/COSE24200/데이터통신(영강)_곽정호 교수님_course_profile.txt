@@ -1,0 +1,3 @@
+Course Name: 데이터통신(영강)
+Professor: 곽정호 교수님
+Course ID: COSE24200

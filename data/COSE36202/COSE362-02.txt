@@ -1,0 +1,33 @@
+[과목 정보]
+과목명: 기계학습
+교수명: 육동석
+과목코드-분반: COSE362-02
+학점: 3학점
+
+[강의요목]
+기계 학습에서는 컴퓨터 프로그램이 경험을 통해서 스스로 성능을 개선할 수 있는 알고리즘에 관하여 고찰한다. 특히, concept learning, Bayesian learning, hidden Markov models, decision trees, artificial neural networks 등을 학습한다.
+
+[주차별 강의 내용]
+1주: Introduction
+2주: Computational Learning Theory
+3주: Bayesian Decision Theory / Maximum Likelihood Estimation
+4주: Multivariate Methods / Regression
+5주: Bayesian Learning
+6주: Unsupervised Learning / Expectation Maximization
+7주: Instance Based Learning / Decision Trees
+8주: Examination (중간고사)
+9주: Deep Learning
+10주: Deep Generative Models
+11주: Hidden Markov Models
+12주: Automatic Speech Recognition
+13주: Reinforcement Learning
+14주: Ensemble Learning
+15주: Examination (기말고사)
+16주: (Empty)
+
+[평가 방식]
+정보 없음 (강의계획서 텍스트 추출 시 배점 비율 누락됨)
+
+[교재 정보]
+Introduction to Machine Learning - Ethem Alpaydin (MIT Press)
+Artificial Intelligence - A Modern Approach - Stuart Russell and Peter Norvig (Prentice Hall)

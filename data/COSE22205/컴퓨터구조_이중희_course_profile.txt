@@ -1,0 +1,3 @@
+Course Name: 컴퓨터구조
+Professor: 이중희
+Course ID: COSE22205

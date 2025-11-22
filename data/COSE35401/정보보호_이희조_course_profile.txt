@@ -1,0 +1,3 @@
+Course Name: 정보보호
+Professor: 이희조
+Course ID: COSE35401
