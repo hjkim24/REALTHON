@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { EntityNotExistException } from 'libs/exception/src';
+import { RecommendDto } from './dto/recommend.dto';
 import { LLMService } from './llm/llm.service';
 import { PromptService } from './rag/prompt.service';
 import { VectorService } from './rag/vector.service';
@@ -11,7 +13,7 @@ export class RecommendService {
     private llm: LLMService,
   ) {}
 
-  async recommend(info: any) {
+  async recommend(info: RecommendDto) {
     // 1) 초기 검색: 해당 과목 정보 가져오기
     const firstDocs = await this.vector.initialSearch(info.course);
 
@@ -21,6 +23,10 @@ export class RecommendService {
       info.grade,
     );
     const refinedQuery = await this.llm.ask(refinePrompt);
+
+    if (!refinedQuery) {
+      throw new EntityNotExistException('refinedQuery');
+    }
 
     // 3) 최종 검색
     const finalDocs = await this.vector.finalSearch(

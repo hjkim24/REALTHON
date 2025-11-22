@@ -126,7 +126,12 @@ export class CourseService {
     }
 
     // Course 생성
-    const createdCourses = [];
+    const createdCourses: Array<{
+      id: number;
+      title: string;
+      courseCode: string;
+      grade: Grade;
+    }> = [];
     for (const extracted of extractedCourses) {
       try {
         // Grade 변환

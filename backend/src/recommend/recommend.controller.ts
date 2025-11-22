@@ -11,6 +11,7 @@ import { MulterFile } from '../common/types/multer.types';
 import { CourseService } from './course.service';
 import { RecommendDto } from './dto/recommend.dto';
 import { RecommendService } from './recommend.service';
+import { Grade } from '@prisma/client';
 
 @Controller('recommend')
 export class RecommendController {
@@ -33,7 +34,7 @@ export class RecommendController {
       id: number;
       title: string;
       courseCode: string;
-      grade: string;
+      grade: Grade;
     }>;
   }> {
     if (!file) {
