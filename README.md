@@ -27,7 +27,6 @@ CourseFit은 학생의 성적표를 분석하여 개인화된 강의를 추천�
   - [OpenAI](https://platform.openai.com/) (v6.9.1)
   - [ChromaDB](https://www.trychroma.com/) (v3.1.6)
 - **Vector Database**: ChromaDB (Docker 컨테이너)
-- **Validation**: class-validator, class-transformer
 
 ### Frontend
 
@@ -38,13 +37,13 @@ CourseFit은 학생의 성적표를 분석하여 개인화된 강의를 추천�
 
 ### Infrastructure
 
-- **Containerization**: Docker, Docker Compose
+- **Containerization**: Docker Compose
 - **Database**: PostgreSQL (via Docker)
 - **Vector Store**: ChromaDB (via Docker)
 
 ### Data Processing
 
-- **Language**: Python 3
+- **Language**: Python3
 - **Libraries**: chromadb, openai
 
 ## 📁 프로젝트 구조

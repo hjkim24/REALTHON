@@ -113,7 +113,7 @@ let RecommendService = RecommendService_1 = class RecommendService {
                     recommendations: this.fallbackRecommendations(finalDocs, userCourses),
                 };
             }
-            const recommendations = this.parseLLMResponse(llmResponse, finalDocs);
+            const recommendations = this.parseLLMResponse(llmResponse, finalDocs, userCourses);
             return {
                 recommendations: recommendations.slice(0, 3),
             };
@@ -140,7 +140,7 @@ let RecommendService = RecommendService_1 = class RecommendService {
         };
         return weightMap[grade] || 0.5;
     }
-    parseLLMResponse(llmResponse, finalDocs) {
+    parseLLMResponse(llmResponse, finalDocs, userCourses) {
         try {
             let cleanedResponse = llmResponse.trim();
             if (cleanedResponse.startsWith('```')) {
@@ -166,6 +166,7 @@ let RecommendService = RecommendService_1 = class RecommendService {
                     courseId;
                 docMap.set(courseId, { title, metadata: doc.metadata });
             });
+            const excludeCourseIds = new Set(userCourses.map((course) => course.courseCode));
             const recommendations = parsed.recommendations
                 .map((rec) => {
                 const docInfo = docMap.get(rec.courseId);
@@ -181,6 +182,7 @@ let RecommendService = RecommendService_1 = class RecommendService {
                 };
             })
                 .filter((rec) => rec !== null)
+                .filter((rec) => !excludeCourseIds.has(rec.courseId))
                 .slice(0, 3);
             return recommendations;
         }

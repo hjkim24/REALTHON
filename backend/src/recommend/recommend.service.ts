@@ -158,7 +158,11 @@ export class RecommendService {
       }
 
       // 7) JSON 파싱 및 변환
-      const recommendations = this.parseLLMResponse(llmResponse, finalDocs);
+      const recommendations = this.parseLLMResponse(
+        llmResponse,
+        finalDocs,
+        userCourses,
+      );
 
       return {
         recommendations: recommendations.slice(0, 3), // 정확히 3개로 제한
@@ -199,6 +203,7 @@ export class RecommendService {
   private parseLLMResponse(
     llmResponse: string,
     finalDocs: Array<{ metadata: Record<string, any> }>,
+    userCourses: Array<{ courseCode: string }>,
   ): RecommendedCourse[] {
     try {
       // JSON 코드 블록 제거 (```json ... ```)
@@ -237,6 +242,10 @@ export class RecommendService {
         docMap.set(courseId, { title, metadata: doc.metadata });
       });
 
+      const excludeCourseIds = new Set(
+        userCourses.map((course) => course.courseCode),
+      );
+
       const recommendations: RecommendedCourse[] = parsed.recommendations
         .map((rec) => {
           const docInfo = docMap.get(rec.courseId);
@@ -254,6 +263,7 @@ export class RecommendService {
           } as RecommendedCourse;
         })
         .filter((rec): rec is RecommendedCourse => rec !== null)
+        .filter((rec) => !excludeCourseIds.has(rec.courseId))
         .slice(0, 3); // 정확히 3개로 제한
 
       return recommendations;
