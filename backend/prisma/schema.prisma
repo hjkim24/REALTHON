@@ -10,5 +10,43 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+}
+
+model TimeTable {
+  id        Int       @id @default(autoincrement())
+  imageUrl  String
+  fileName  String
+  fileSize  Int
+  mimeType  String
+  lectures  Lecture[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Lecture {
+  id          Int          @id @default(autoincrement())
+  name        String
+  room        String
+  startTime   String? // 시작 시간 (예: "09:00")
+  endTime     String? // 종료 시간 (예: "10:30")
+  timeTableId Int
+  timeTable   TimeTable    @relation(fields: [timeTableId], references: [id], onDelete: Cascade)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  lectureDays LectureDay[]
+}
+
+enum days {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+}
+
+model LectureDay {
+  id        Int     @id @default(autoincrement())
+  lecture   Lecture @relation(fields: [lectureId], references: [id], onDelete: Cascade)
+  lectureId Int
+  day       days
 }
