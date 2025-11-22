@@ -1,6 +1,6 @@
 <div>
   <h1>Coursefit</h1>
-  <img src="https://github.com/EFUB-SWS-Rudolph/Frontend/blob/b75afe13e17af5302514e2b89d6d6b5feba1386b/sws/src/common/assets/images/weevoImg.png" alt="coursefitImage" width="600" />
+  <img src="https://github.com/corjqnrl/REALTHON/blob/0abedfc6e96e3d89ecdd0bb6e5a86f44060a27fd/coursefit/assets/coursefit.jpg" alt="coursefitImage" width="1100" />
   <br />
 
 <a href="https://weevo.netlify.app">Coursefit Link</a>
