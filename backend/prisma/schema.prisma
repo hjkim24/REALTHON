@@ -12,3 +12,57 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+// =======================
+// Enums
+// =======================
+
+enum Semester {
+  S1 // 1학기
+  S2 // 2학기
+  SUMMER
+  WINTER
+}
+
+enum Grade {
+  A_PLUS
+  A
+  B_PLUS
+  B
+  C_PLUS
+  C
+  D_PLUS
+  D
+  F
+  P
+}
+
+enum Category {
+  Major
+  General
+}
+
+// =======================
+// Academic structure
+// =======================
+
+model Department {
+  id     Int     @id @default(autoincrement())
+  code   String  @unique // e.g. "CSE"
+  nameKo String
+  nameEn String?
+
+  courses Course[]
+}
+
+model Course {
+  id           Int        @id @default(autoincrement())
+  departmentId Int
+  department   Department @relation(fields: [departmentId], references: [id])
+  courseCode   String // 학수번호 (e.g. "CS101")
+  title        String
+  grade        Grade
+  category     Category   @default(General)
+
+  @@unique([departmentId, courseCode])
+}

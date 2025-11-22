@@ -1,0 +1,19 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.bak
+
+# Docker volumes
+postgres_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
