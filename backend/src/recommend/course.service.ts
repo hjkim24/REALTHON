@@ -203,4 +203,73 @@ export class CourseService {
       courses: createdCourses,
     };
   }
+
+  /**
+   * 사용자의 모든 수강 과목 조회
+   * @returns Course 배열
+   */
+  async getUserCourses(): Promise<
+    Array<{
+      id: number;
+      title: string;
+      courseCode: string;
+      grade: Grade;
+      category: Category;
+    }>
+  > {
+    return await this.prisma.course.findMany({
+      orderBy: {
+        id: 'desc', // 최근 수강 순
+      },
+    });
+  }
+
+  /**
+   * 특정 카테고리의 수강 과목 조회
+   * @param category Category enum
+   * @returns Course 배열
+   */
+  async getUserCoursesByCategory(category: Category): Promise<
+    Array<{
+      id: number;
+      title: string;
+      courseCode: string;
+      grade: Grade;
+      category: Category;
+    }>
+  > {
+    return await this.prisma.course.findMany({
+      where: {
+        category,
+      },
+      orderBy: {
+        id: 'desc',
+      },
+    });
+  }
+
+  /**
+   * 좋은 성적을 받은 과목들 조회 (A+ 또는 A)
+   * @returns Course 배열
+   */
+  async getHighGradeCourses(): Promise<
+    Array<{
+      id: number;
+      title: string;
+      courseCode: string;
+      grade: Grade;
+      category: Category;
+    }>
+  > {
+    return await this.prisma.course.findMany({
+      where: {
+        grade: {
+          in: [Grade.A_PLUS, Grade.A],
+        },
+      },
+      orderBy: {
+        id: 'desc',
+      },
+    });
+  }
 }
