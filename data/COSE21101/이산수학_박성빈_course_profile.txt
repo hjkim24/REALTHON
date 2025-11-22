@@ -1,3 +1,0 @@
-Course Name: 이산수학
-Professor: 박성빈
-Course ID: COSE21101

@@ -1,3 +1,0 @@
-Course Name: 데이터통신
-Professor: 김효곤
-Course ID: COSE24201

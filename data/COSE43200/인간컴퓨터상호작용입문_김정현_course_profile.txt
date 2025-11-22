@@ -1,3 +1,0 @@
-Course Name: 인간컴퓨터상호작용입문
-Professor: 김정현
-Course ID: COSE43200

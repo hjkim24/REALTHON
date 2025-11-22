@@ -1,3 +1,0 @@
-Course Name: 자료구조
-Professor: 박채용
-Course ID: COSE21302

@@ -1,3 +1,0 @@
-Course Name: 운영체제
-Professor: 오상은
-Course ID: COSE34102

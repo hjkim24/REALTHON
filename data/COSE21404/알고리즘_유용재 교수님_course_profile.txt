@@ -1,3 +1,0 @@
-Course Name: 알고리즘
-Professor: 유용재 교수님
-Course ID: COSE21404

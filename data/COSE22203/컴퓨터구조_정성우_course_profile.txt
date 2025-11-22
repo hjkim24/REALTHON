@@ -1,3 +1,0 @@
-Course Name: 컴퓨터구조
-Professor: 정성우
-Course ID: COSE22203

@@ -1,3 +1,0 @@
-Course Name: 클라우드컴퓨팅
-Professor: 유헌창
-Course ID: COSE44400

@@ -1,3 +1,0 @@
-Course Name: 딥러닝
-Professor: 이정범
-Course ID: COSE47402

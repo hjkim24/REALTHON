@@ -1,3 +1,0 @@
-Course Name: 자료구조
-Professor: 김세연
-Course ID: COSE21301

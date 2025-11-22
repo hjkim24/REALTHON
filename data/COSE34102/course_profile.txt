@@ -1,3 +1,0 @@
-Course Name: 운영체제 T
-Professor: 유헌창 교수님
-Course ID: COSE34102

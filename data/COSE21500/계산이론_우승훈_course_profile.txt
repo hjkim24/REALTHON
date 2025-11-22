@@ -1,3 +1,0 @@
-Course Name: 계산이론
-Professor: 우승훈
-Course ID: COSE21500

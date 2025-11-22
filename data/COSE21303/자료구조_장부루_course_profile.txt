@@ -1,3 +1,0 @@
-Course Name: 자료구조
-Professor: 장부루
-Course ID: COSE21303

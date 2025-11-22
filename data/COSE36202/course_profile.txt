@@ -1,3 +1,0 @@
-Course Name: 기계학습
-Professor: 김현철 교수님
-Course ID: COSE36202

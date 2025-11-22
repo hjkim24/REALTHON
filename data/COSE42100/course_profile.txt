@@ -1,3 +1,0 @@
-Course Name: 임베디드시스템(영강)
-Professor: 서태원 교수님
-Course ID: COSE42100

@@ -1,3 +1,0 @@
-Course Name: 데이터통신
-Professor: 민성기
-Course ID: COSE24202

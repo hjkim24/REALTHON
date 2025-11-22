@@ -1,3 +1,0 @@
-Course Name: 인공지능
-Professor: 육동석
-Course ID: 인공지능_육동석

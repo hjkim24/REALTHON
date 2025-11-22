@@ -1,3 +1,0 @@
-Course Name: 딥러닝
-Professor: 이상민
-Course ID: COSE47403

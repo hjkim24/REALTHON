@@ -1,3 +1,0 @@
-Course Name: 딥러닝
-Professor: 백승준
-Course ID: COSE47401

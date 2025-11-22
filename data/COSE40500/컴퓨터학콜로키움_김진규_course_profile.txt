@@ -1,3 +1,0 @@
-Course Name: 컴퓨터학콜로키움
-Professor: 김진규
-Course ID: COSE40500

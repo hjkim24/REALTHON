@@ -1,3 +1,0 @@
-Course Name: 고급딥러닝
-Professor: 서홍석
-Course ID: COSE47500

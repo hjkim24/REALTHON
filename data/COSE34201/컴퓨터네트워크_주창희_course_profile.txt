@@ -1,3 +1,0 @@
-Course Name: 컴퓨터네트워크
-Professor: 주창희
-Course ID: COSE34201

@@ -1,3 +1,0 @@
-Course Name: 기계학습
-Professor: 강재우
-Course ID: COSE36203

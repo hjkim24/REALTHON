@@ -1,3 +1,0 @@
-Course Name: 컴퓨터프로그래밍II(영강)
-Professor: 강철민 교수님
-Course ID: COSE10205

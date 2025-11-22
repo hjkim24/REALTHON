@@ -1,3 +1,0 @@
-Course Name: 딥러닝(영강) DL
-Professor: 서홍석 교수님
-Course ID: COSE47403
